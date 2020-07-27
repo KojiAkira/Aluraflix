@@ -1,0 +1,14 @@
+{
+  "name": "arulaflix",
+  "version": "1.0.0",
+  "description": "Imersão React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Koji Akira",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^3.4.1"
+  }
+}
