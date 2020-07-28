@@ -1,27 +1,23 @@
 import React from 'react';
-import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
+import { VideoCardGroupContainer, VideoCardList, Title} from './styles';
 import VideoCard from './components/VideoCard';
 
 function VideoCardGroup({
   ignoreFirstVideo,
-  category,
+  category, urlExtra,
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
-  const categoryExtraLink = category.link_extra;
+  //const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+  
   return (
-    <VideoCardGroupContainer>
+    <VideoCardGroupContainer as="a" href={urlExtra} target="_blank">
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
+          <Title target="_blank" style={{ backgroundColor: categoryColor || 'red' }}>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && 
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}  
-            </ExtraLink>
-          }
         </>
       )}
       <VideoCardList>
